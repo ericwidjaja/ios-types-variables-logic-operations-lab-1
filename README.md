@@ -11,37 +11,37 @@
 
 ## 1. Which data type would be the best to use for recording the total balance of an online shopping cart?
 
-// your answer here
+// Double would be the best data type to use.
 
 ***
 ## 2. Which of the following variable declarations is **incorrect**?
 
 ```swift
-let isClosed: Bool = false
+let isClosed: Bool = false //CORRECT
 
-let version: Double = 3.0
+let version: Double = 3.0  //CORRECT
 
-let emotion: String = ":)"
+let emotion: String = ":)"  //CORRECT
 
-let grade: Char = "a"
+let grade: Char = "a"  //INCORRECT
 ```
 
 ***
 ## 3. Simplify the following using a calculator:
 
 1 + 4 * 2 / 2 + 2
-
+// = 7
 ***
 ## 4. Which of the following are true? State all that apply.
 
 ```swift
-17 % 4 == 1
+17 % 4 == 1  //TRUE
 
-25 % 4 != 1
+25 % 4 != 1   //TRUE
 
-81 % 9 != 840 % 2
+81 % 9 != 840 % 2  //TRUE
 
-(14 % 2 < 4) || (243 % 13 > 2) || (52 % 3 > 5)
+(14 % 2 < 4) || (243 % 13 > 2) || (52 % 3 > 5)   //FALSE
 ```
 
 ***
@@ -51,25 +51,25 @@ a)
 ```swift
 let numOne = 4.0
 let numTwo = 4.0
-let a = numOne == numTwo
+let a = numOne == numTwo //TRUE
 ```
 b)
 ```swift
 let numThree = 24/5
 let numFour = 24.0/5.0
-let b = numThree == numFour
+let b = numThree == numFour //FALSE
 ```
 c)
 ```swift
 let numFive = 24%5
 let numSix = 24.0%5.0
-let c = numFive == numSix
+let c = numFive == numSix //FALSE
 ```
 d)
 ```swift
 let numSeven = 4.0 + 1.2
 let numEight = 5.0 + .2
-let d = numSeven == numEight
+let d = numSeven == numEight //FALSE
 ```
 
 ***
@@ -83,3 +83,4 @@ i *= 2
 i %= 3
 i -= 3
 ```
+// -2
