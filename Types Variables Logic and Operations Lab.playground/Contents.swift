@@ -58,11 +58,56 @@ import UIKit
  4. Seconds in Year
  
  Determine the number of seconds in a year and store the number in a variable named secondsInAYear.
- */
-let dayInAYear:Int = 365
-let hourInADay:Int = 24
-let minInAnHour:Int = 60
-let secondsInAMin:Int = 60
-var secondsInAYear = secondsInAMin * minInAnHour * hourInADay * dayInAYear
+ 
+ let dayInAYear:Int = 365
+ let hourInADay:Int = 24
+ let minInAnHour:Int = 60
+ let secondsInAMin:Int = 60
+ var secondsInAYear = secondsInAMin * minInAnHour * hourInADay * dayInAYear
+ 
+ print("Number of seconds in a year = \(secondsInAYear)")
+ 
+ 5. Number of Pixels
+ Your are given the width and height of a screen in pixels. Calculate the total number of pixels on the screen and store the result in a variable named numberOfPixels.
+ 
+ ```swift
+ var width = 1920
+ var height = 1080
+ 
+ Example 1
+ Input:
+ var width = 4
+ var height = 3
+ 
+ Expected values:
+ numberOfPixels = 12
+ 
+ Example 2
+ Input:
+ var width = 1920
+ var height = 1080
+ 
+ Expected values:
+ numberOfPixels = 2073600
+ 
+ func numOfPixels (width: Int, height: Int) -> Int {
+    let numberOfPixels = width * height
+    print("Width  = \(width) \nHeight = \(height)  \nNumber of pixels =  \(numberOfPixels)\n")
+    return numberOfPixels
+}
 
-print("Number of seconds in a year = \(secondsInAYear)")
+numOfPixels(width: 1920, height: 1080)
+numOfPixels(width: 4, height: 3)
+
+ 
+
+func sumAndDiff (sum: Int, diff: Int) -> Int {
+    var sumDiff = 0
+    sumDiff = sum + diff
+    a = sumDiff / 2
+    b = sum - a
+    print("Sum  = \(sum) \nDiff = \(diff)  \nSum + Diff =  \(sumDiff) \n     var a = \(a)\n     var b = \(b) \n")
+    return sumDiff
+}
+sumAndDiff(sum: 16, diff: 4)
+sumAndDiff(sum: 2, diff: 0)

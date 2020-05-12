@@ -131,14 +131,21 @@ var height = 1080
 
 Expected values:
 numberOfPixels = 2073600
-
 Hint:
 Consider a 5x3 screen like this:
 *****
 *****
 *****
-
 The number of pixels on this screen is 5+5+5 = 5*3
+
+ANSWER:
+func numOfPixels (width: Int, height: Int) -> Int {
+    let numberOfPixels = width * height
+    print("Width  = \(width) \nHeight = \(height)  \nNumber of pixels =  \(numberOfPixels)\n")
+    return numberOfPixels
+}
+numOfPixels(width: 4, height: 3)
+numOfPixels(width: 1920, height: 1080)
 ```
 
 ***
@@ -171,6 +178,18 @@ b = 1
 Hint:
 sum + diff = a + a + b - b
 sum + diff = 2 * a
+
+ANSWER:
+func sumAndDiff (sum: Int, diff: Int) -> Int {
+    var sumDiff = 0
+    sumDiff = sum + diff
+    a = sumDiff / 2
+    b = sum - a
+    print("Sum  = \(sum) \nDiff = \(diff)  \nSum + Diff =  \(sumDiff) \n     var a = \(a)\n     var b = \(b) \n")
+    return sumDiff
+}
+sumAndDiff(sum: 16, diff: 4)
+sumAndDiff(sum: 2, diff: 0)
 ```
 
 ***
