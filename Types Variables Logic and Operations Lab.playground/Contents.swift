@@ -143,19 +143,63 @@ import UIKit
  10. Alice's Age
  
  x years from now Alice will be y times older than her brother Bob. Bob is 12 years old. How old is Alice?
-
-var x = 3
-var y = 2
-var bob = 12
-var alice = 0
-//alice + x = y * (bob + x)
-alice = y * (bob + x) - x
-
-func howOldIsAlice (x: Int, y: Int, bob: Int) -> Int {
-    alice = y * (bob + x) - x
-    print("Alice will be \(alice) years old in \(x) year,\n  \(y) times older than her brother Bob.\n  Who is only \(bob) years old \n")
-    return alice
-}
-howOldIsAlice(x: 3, y: 2, bob: 12)
-howOldIsAlice(x: 1, y: 3, bob: 12)
-*/
+ 
+ var x = 3
+ var y = 2
+ var bob = 12
+ var alice = 0
+ //alice + x = y * (bob + x)
+ alice = y * (bob + x) - x
+ 
+ func howOldIsAlice (x: Int, y: Int, bob: Int) -> Int {
+ alice = y * (bob + x) - x
+ print("Alice will be \(alice) years old in \(x) year,\n  \(y) times older than her brother Bob.\n  Who is only \(bob) years old \n")
+ return alice
+ }
+ howOldIsAlice(x: 3, y: 2, bob: 12)
+ howOldIsAlice(x: 1, y: 3, bob: 12)
+ 
+ 11. Trading Oranges for Apples
+ func fruitTrading(xApples:Int) -> Int {
+ var apples = 0
+ var orange = 0
+ apples = xApples % 5
+ orange = xApples / 5
+ print("I had \(xApples)🍏🍎,  I traded them with 💂🏼‍♀️\n    Now I have \(orange)🍊🟠 and \(apples)🍎🍏\n")
+ return xApples
+ }
+ fruitTrading(xApples: 17)
+ fruitTrading(xApples: 25)
+ 
+ 12. Boy and Girl Percentages
+ 
+ func percentage(numberOfBoys: Int, numberOfGirls: Int) -> Double {
+ 
+ let total = numberOfBoys + numberOfGirls
+ var percentageGirls = Double()
+ var percentageBoys = Double()
+ 
+ percentageGirls = Double((numberOfGirls * 100) / total)
+ percentageBoys = Double((numberOfBoys * 100) / total)
+ print("  👦🏽 = \(numberOfBoys)\n  💁🏽‍♀️ = \(numberOfGirls)\nTotal 👦🏽💁🏽‍♀️ = \(total)\n     %💁🏽‍♀️ = \(percentageGirls)%, %👦🏽 = \(percentageBoys)%, ")
+ return Double(total)
+ }
+ percentage(numberOfBoys: 20, numberOfGirls: 60)
+ 
+ 13. Boolean Evaluations 2
+ Which of the following expressions evaluate to true?
+ 
+ false || true // true
+ false && true // false
+ !false //true
+ //!!!true //error
+ !(true && true) //false
+ 
+ //14. Boolean Evaluations 3
+ //Which of the following expressions evaluate to true?
+ 3 < 12.3                 // true
+ 9 == 2                   // false
+ "Hello!" == "Hello!"     // true
+ 19.0 >= 19.0             // true
+ 9 > 7 && 7 < 10          // true
+ */

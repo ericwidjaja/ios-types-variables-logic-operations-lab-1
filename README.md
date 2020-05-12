@@ -74,8 +74,8 @@ var a = 1
 var b = 2
 var sum = a + b
 func toAdd(a: Int, b: Int) -> Int {
-    let sum = a + b
-    return sum }
+let sum = a + b
+return sum }
 
 toAdd(a: 1, b: 2)
 print(toAdd(a: 1, b: 2))
@@ -140,9 +140,9 @@ The number of pixels on this screen is 5+5+5 = 5*3
 
 ANSWER:
 func numOfPixels (width: Int, height: Int) -> Int {
-    let numberOfPixels = width * height
-    print("Width  = \(width) \nHeight = \(height)  \nNumber of pixels =  \(numberOfPixels)\n")
-    return numberOfPixels
+let numberOfPixels = width * height
+print("Width  = \(width) \nHeight = \(height)  \nNumber of pixels =  \(numberOfPixels)\n")
+return numberOfPixels
 }
 numOfPixels(width: 4, height: 3)
 numOfPixels(width: 1920, height: 1080)
@@ -181,12 +181,12 @@ sum + diff = 2 * a
 
 ANSWER:
 func sumAndDiff (sum: Int, diff: Int) -> Int {
-    var sumDiff = 0
-    sumDiff = sum + diff
-    a = sumDiff / 2
-    b = sum - a
-    print("Sum  = \(sum) \nDiff = \(diff)  \nSum + Diff =  \(sumDiff) \n     var a = \(a)\n     var b = \(b) \n")
-    return sumDiff
+var sumDiff = 0
+sumDiff = sum + diff
+a = sumDiff / 2
+b = sum - a
+print("Sum  = \(sum) \nDiff = \(diff)  \nSum + Diff =  \(sumDiff) \n     var a = \(a)\n     var b = \(b) \n")
+return sumDiff
 }
 sumAndDiff(sum: 16, diff: 4)
 sumAndDiff(sum: 2, diff: 0)
@@ -270,9 +270,9 @@ Output:
 
 ANSWER:
 func dogToHumanYears(dogYrs: Int) -> Int {
-    let humanYrs = abs(dogYrs / 7)
-    print("Age in Dog Years = \(dogYrs) \n Age in Human Years = \(humanYrs)")
-    return humanYrs
+let humanYrs = abs(dogYrs / 7)
+print("Age in Dog Years = \(dogYrs) \n Age in Human Years = \(humanYrs)")
+return humanYrs
 }
 dogToHumanYears(dogYrs: 50)
 ```
@@ -311,9 +311,9 @@ Solve for alice
 
 ANSWER:
 func howOldIsAlice (x: Int, y: Int, bob: Int) -> Int {
-    alice = y * (bob + x) - x
-    print("Alice will be \(alice) years old in \(x) year,\n  \(y) times older than her brother Bob.\n  Who is only \(bob) years old \n")
-    return alice
+alice = y * (bob + x) - x
+print("Alice will be \(alice) years old in \(x) year,\n  \(y) times older than her brother Bob.\n  Who is only \(bob) years old \n")
+return alice
 }
 
 howOldIsAlice(x: 3, y: 2, bob: 12)
@@ -343,10 +343,20 @@ var x = 25
 Expected values: 
 apples = 0
 oranges = 15
-
 Hint:
 Use the division(/) and the remainder(%) operator
 
+ANSWER:
+func fruitTrading(xApples:Int) -> Int {
+var apples = 0
+var orange = 0
+apples = xApples % 5
+orange = xApples / 5
+print("I had \(xApples)🍏🍎,  I traded them with 💂🏼‍♀️\n    Now I have \(orange)🍊🟠 and \(apples)🍎🍏\n")
+return xApples
+}
+fruitTrading(xApples: 17)
+fruitTrading(xApples: 25)
 ```
 
 ***
@@ -369,19 +379,31 @@ Output:
 25 // percentage of boys
 75 // percentage of girls
 
-```
+ANSWER:
+func percentage(numberOfBoys: Int, numberOfGirls: Int) -> Double {
 
+let total = numberOfBoys + numberOfGirls
+var percentageGirls = Double()
+var percentageBoys = Double()
+
+percentageGirls = Double((numberOfGirls * 100) / total)
+percentageBoys = Double((numberOfBoys * 100) / total)
+print("  👦🏽 = \(numberOfBoys)\n  💁🏽‍♀️ = \(numberOfGirls)\nTotal 👦🏽💁🏽‍♀️ = \(total)\n     %💁🏽‍♀️ = \(percentageGirls)%, %👦🏽 = \(percentageBoys)%, ")
+return Double(total)
+}
+percentage(numberOfBoys: 20, numberOfGirls: 60)
+```
 ***
 ## 13. Boolean Evaluations 2
 
 Which of the following expressions evaluate to true?
 
 ```swift
-a. false || true
-b. false && true
-c. !false
-d. !!!true
-e. !(true && true)
+a. false || true    // true
+b. false && true    // false 
+c. !false           // true
+d. !!!true          // error
+e. !(true && true)  // false
 
 ```
 
@@ -391,11 +413,11 @@ e. !(true && true)
 Which of the following expressions evaluate to true?
 
 ```swift
-a. 3 < 12.3
-b. 9 == 2
-c. "Hello!" == "Hello!"
-d. 19.0 >= 19.0
-e. 9 > 7 && 7 < 10
+a. 3 < 12.3                 // true
+b. 9 == 2                   // false
+c. "Hello!" == "Hello!"     // true
+d. 19.0 >= 19.0             // true
+e. 9 > 7 && 7 < 10          // true
 
 ```
 
