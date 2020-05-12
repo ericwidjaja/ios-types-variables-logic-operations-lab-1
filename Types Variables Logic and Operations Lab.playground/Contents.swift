@@ -91,23 +91,71 @@ import UIKit
  numberOfPixels = 2073600
  
  func numOfPixels (width: Int, height: Int) -> Int {
-    let numberOfPixels = width * height
-    print("Width  = \(width) \nHeight = \(height)  \nNumber of pixels =  \(numberOfPixels)\n")
-    return numberOfPixels
-}
-
-numOfPixels(width: 1920, height: 1080)
-numOfPixels(width: 4, height: 3)
-
+ let numberOfPixels = width * height
+ print("Width  = \(width) \nHeight = \(height)  \nNumber of pixels =  \(numberOfPixels)\n")
+ return numberOfPixels
+ }
  
+ numOfPixels(width: 1920, height: 1080)
+ numOfPixels(width: 4, height: 3)
+ 
+ 
+ 
+ func sumAndDiff (sum: Int, diff: Int) -> Int {
+ var sumDiff = 0
+ sumDiff = sum + diff
+ a = sumDiff / 2
+ b = sum - a
+ print("Sum  = \(sum) \nDiff = \(diff)  \nSum + Diff =  \(sumDiff) \n     var a = \(a)\n     var b = \(b) \n")
+ return sumDiff
+ }
+ sumAndDiff(sum: 16, diff: 4)
+ sumAndDiff(sum: 2, diff: 0)
+ 
+ 7. Swap Values
+ Given two variable a and b, swap their values. That is the new value of a will become the old value of b and vice versa.
+ var a = 1
+ var b = 2
+ let c = a
+ 
+ a = b
+ b = c
+ 
+ print("After reassigned;\n a = \(a) \n b = \(b)")
+ 
+ 8. Find last number
+ You are given a number a. Print the last digit of a.
+ 
+ Answer: Use remainder -> move the decimal point one digit ahead, we can use number 10 as the divider
+ var a = 227
+ print (a % 10)
+ 
+ 9. Dog Years
+ You are given Rocky’s age in dog years. Print Rocky’s age in human years. You know that 1 human year is 7 dog years.
+ 
+ func dogToHumanYears(dogYrs: Int) -> Int {
+ let humanYrs = abs(dogYrs / 7)
+ print("Age in Dog Years = \(dogYrs) \n Age in Human Years = \(humanYrs)")
+ return humanYrs
+ }
+ dogToHumanYears(dogYrs: 50)
+ 
+ 10. Alice's Age
+ 
+ x years from now Alice will be y times older than her brother Bob. Bob is 12 years old. How old is Alice?
 
-func sumAndDiff (sum: Int, diff: Int) -> Int {
-    var sumDiff = 0
-    sumDiff = sum + diff
-    a = sumDiff / 2
-    b = sum - a
-    print("Sum  = \(sum) \nDiff = \(diff)  \nSum + Diff =  \(sumDiff) \n     var a = \(a)\n     var b = \(b) \n")
-    return sumDiff
+var x = 3
+var y = 2
+var bob = 12
+var alice = 0
+//alice + x = y * (bob + x)
+alice = y * (bob + x) - x
+
+func howOldIsAlice (x: Int, y: Int, bob: Int) -> Int {
+    alice = y * (bob + x) - x
+    print("Alice will be \(alice) years old in \(x) year,\n  \(y) times older than her brother Bob.\n  Who is only \(bob) years old \n")
+    return alice
 }
-sumAndDiff(sum: 16, diff: 4)
-sumAndDiff(sum: 2, diff: 0)
+howOldIsAlice(x: 3, y: 2, bob: 12)
+howOldIsAlice(x: 1, y: 3, bob: 12)
+*/

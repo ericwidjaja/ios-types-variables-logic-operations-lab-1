@@ -214,6 +214,16 @@ var b = 2
 
 a = b // a will have the value 2. The original value of a is lost
 b = a // b will remain the same
+
+ANSWER:
+var a = 1
+var b = 2
+let c = a
+
+a = b
+b = c
+
+print("After reassigned;\n a = \(a) \n b = \(b)")
 ```
 
 ***
@@ -240,6 +250,9 @@ Output:
 
 Hint:
 Use the remainder % operator.
+Answer: Use remainder -> move the decimal point one digit ahead, we can use number 10 as the divider
+var a = 227
+print (a % 10)
 ```
 
 ***
@@ -252,12 +265,17 @@ You are given Rocky’s age in dog years. Print Rocky’s age in human years. Yo
 Example 1
 Input: 
 var rockysAgeInDogYears = 50
-
 Output:
 7
 
+ANSWER:
+func dogToHumanYears(dogYrs: Int) -> Int {
+    let humanYrs = abs(dogYrs / 7)
+    print("Age in Dog Years = \(dogYrs) \n Age in Human Years = \(humanYrs)")
+    return humanYrs
+}
+dogToHumanYears(dogYrs: 50)
 ```
-
 ***
 ## 10. Alice's Age
 
@@ -287,11 +305,19 @@ var bob = 12
 
 Expected values: 
 alice = 38
-
 Hint:
 alice + x = y * (bob + x)
 Solve for alice
 
+ANSWER:
+func howOldIsAlice (x: Int, y: Int, bob: Int) -> Int {
+    alice = y * (bob + x) - x
+    print("Alice will be \(alice) years old in \(x) year,\n  \(y) times older than her brother Bob.\n  Who is only \(bob) years old \n")
+    return alice
+}
+
+howOldIsAlice(x: 3, y: 2, bob: 12)
+howOldIsAlice(x: 1, y: 3, bob: 12)
 ```
 
 ***
